@@ -58,53 +58,51 @@ def prefixo_comum(palavras):
 
 def valida_cpf(num : str):
     cpf = num
-    ultimo = cpf.replace("", ".")
-    lista_cpf = ultimo.split(".")
+    fim = cpf.replace("", ".")
+    lista_cpf = fim.split(".")
     lista_cpf.remove(lista_cpf[-1])
     lista_cpf.remove(lista_cpf[-1])
-    lista_validacao = [int(lista_cpf[-2]), int(lista_cpf[-1]) ]
+    list_valid = [int(lista_cpf[-2]), int(lista_cpf[-1]) ]
     lista = []
-    for n in range(len(lista_cpf) - 2):
-        lista.append(lista_cpf[n])
-
-    multiplicacoes = []
-    for n in range(2, 11):
-       multi = n * int(lista[-1])
-       multiplicacoes.append(multi)
-       lista.pop() #tira o ultimo indice da lista
+    for i in range(len(lista_cpf) - 2):
+        lista.append(lista_cpf[i])
+    multiplicacao = []
+    for m in range(2, 11):
+       multi = m * int(lista[-1])
+       multiplicacao.append(multi)
+       lista.pop()
     soma = 0
-    for numero in multiplicacoes:
-        soma += numero
+    for n in multiplicacao:
+        soma += n
     div1 = soma % 11 
-    digito1 = 11 - div1
-    if digito1 >= 10:
-        digito1 = 0
+    dig1 = 11 - div1
+    if dig1 >= 10:
+        dig1 = 0
     cpf2 = num
-    ultimo2 = cpf2.replace("", ".")
-    lista_cpf2 = ultimo2.split(".")
+    fim2 = cpf2.replace("", ".")
+    lista_cpf2 = fim2.split(".")
     lista_cpf2.remove(lista_cpf2[-1])
     lista_cpf2.remove(lista_cpf2[-1])
-    lista_validacao2 = [lista_cpf2[-2], lista_cpf2[-1] ]
+    list_valid2 = [lista_cpf2[-2], lista_cpf2[-1] ]
     lista2 = []
-    for n in range(len(lista_cpf2) - 1):
-        lista2.append(lista_cpf2[n])
-    multiplicacoes2 = []
-    for n in range(2, 12):
-        multi2 = n * int(lista2[-1])
-        multiplicacoes2.append(multi2)
+    for l in range(len(lista_cpf2) - 1):
+        lista2.append(lista_cpf2[l])
+    multiplicacao2 = []
+    for m in range(2, 12):
+        multi2 = m * int(lista2[-1])
+        multiplicacao2.append(multi2)
         lista2.pop()
     soma2 = 0
-    for numero2 in multiplicacoes2:
-        soma2 += numero2
+    for n in multiplicacao2:
+        soma2 += n
     div2 = soma2 % 11 
-    digito2 = 11 - div2
-    if digito2 >= 10:
-        digito2 = 0
-    verificacao = []
-    verificacao.append(digito1)
-    verificacao.append(digito2)
-
-    if verificacao == lista_validacao:
+    dig2 = 11 - div2
+    if dig2 >= 10:
+        dig2 = 0
+    verif = []
+    verif.append(dig1)
+    verif.append(dig2)
+    if verif == list_valid:
         return True
     else:
         return False
