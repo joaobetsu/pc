@@ -105,6 +105,6 @@ def valida_cpf(num : str):
     verificacao.append(digito2)
 
     if verificacao == lista_validacao:
-        return "Cpf valido!"
+        return True
     else:
-        return "Cpf Invalido!"
+        return False
