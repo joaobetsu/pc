@@ -106,3 +106,19 @@ def valida_cpf(num : str):
         return True
     else:
         return False
+
+def traduz_sinos(sequencia):
+    i = 0
+    while i < 5:
+        toque = sequencia[i].upper()
+        if toque == "DING":
+            print("Ensolarado.")
+            i += 1
+        elif toque == "DONG":
+            print("Nublado.")
+            i += 1
+        elif toque == "DANG":
+            print("Possibilidade de Chuva")
+            i += 1
+        else:
+            print("Toque inválido.")
