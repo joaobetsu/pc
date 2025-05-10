@@ -38,3 +38,6 @@ elif opcao == "7":
     entrada = input("Digite as palavras seperadas por vírgulas: ")
     palavras = entrada.replace(" ", "").split(",")
     print(deflista.prefixo_comum(palavras))
+elif opcao == "8":
+    num = input("Digite o CPF a ser validado: ")
+    print(deflista.valida_cpf(num))
