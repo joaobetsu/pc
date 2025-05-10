@@ -11,6 +11,7 @@ print("7. Prefixo Comum Mais Longo.")
 print("8. Validador de CPF Simplificado.")
 print("9. O Mistério dos Sinos.")
 print("10. Desafio Ninja.")
+print("11. Sair.")
 opcao = input("Escolha uma opção entre as que estão acima: ")
 
 if opcao == "1":
@@ -41,3 +42,5 @@ elif opcao == "7":
 elif opcao == "8":
     num = input("Digite o CPF a ser validado: ")
     print(deflista.valida_cpf(num))
+elif opcao == "11":
+    print("Saindo...")
