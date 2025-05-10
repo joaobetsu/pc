@@ -42,5 +42,11 @@ elif opcao == "7":
 elif opcao == "8":
     num = input("Digite o CPF a ser validado: ")
     print(deflista.valida_cpf(num))
+elif opcao == "9":
+    entradas = []
+    while len(entradas) < 5:
+        toque = input("Toque: ")
+        entradas.append(toque)
+    print(deflista.traduz_sinos(entradas))
 elif opcao == "11":
     print("Saindo...")
