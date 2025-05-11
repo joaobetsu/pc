@@ -10,8 +10,7 @@ print("6. Números Primos em Intervalo.")
 print("7. Prefixo Comum Mais Longo.")
 print("8. Validador de CPF Simplificado.")
 print("9. O Mistério dos Sinos.")
-print("10. Desafio Ninja.")
-print("11. Sair.")
+print("10. Sair.")
 opcao = input("Escolha uma opção entre as que estão acima: ")
 
 if opcao == "1":
@@ -48,5 +47,5 @@ elif opcao == "9":
         toque = input("Toque: ")
         entradas.append(toque)
     print(deflista.traduz_sinos(entradas))
-elif opcao == "11":
+elif opcao == "10":
     print("Saindo...")
