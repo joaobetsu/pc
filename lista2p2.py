@@ -1,5 +1,9 @@
 import deflista
 
+# MEMBROS:
+# João Gabriel Panobianco Damaceno | RA: 2031633
+# Nicolas Augusto Cardoso | RA: 2039056
+
 print("Bem vindo ao Menu!")
 print("1. Soma de Dois Números.")
 print("2. Conversor de Temperatura.")
