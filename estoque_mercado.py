@@ -74,3 +74,19 @@ while True:
                                         print("Compra realizada com sucesso!")
                                         if estoque[indice][4] == 0:
                                             print(f"Produto esgotado e removido do estoque.")
+                                            estoque.pop(indice)
+                                    else:
+                                        print("Quantidade insuficiente em estoque.")
+                                else:
+                                    print("Quantidade inválida.")
+                            except ValueError:
+                                print("Quantidade inválida.")
+                        else:
+                            print("Produto não encontrado.")
+                    except ValueError:
+                        print("Indice inválido.")
+    elif opcao == "4":
+        print("Saindo...")
+        break
+    else:
+        print("Opção inválida.")
